@@ -12,7 +12,7 @@ public class Test {
 		System.out.println("The number of today is...");
 		System.out.println(num);
 		
-		if (num==num2)
+		if (num==num2 || num==14 || num==4)
 			System.out.println("It's a match");
 		else 
 			System.out.println("It is not a match");
