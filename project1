@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main
+public class project
 {
 	public static void main(String[] args) {
 	    Scanner scnr = new Scanner(System.in);
@@ -7,7 +7,10 @@ public class Main
 		String operator= "";
 		int numbers;
 		double numberEntered;
+		double totalNum = 0;
 		String goAgain = "Y";
+		double num = 0;
+		double radians= 0;
 		
 		while (goAgain.equals("Y")){
 		System.out.println("Enter the calculator mode: Standard/Scientific?");
@@ -25,15 +28,164 @@ public class Main
 		            System.out.println("How many numbers would you like to add:");
 		            numbers= scnr.nextInt();
 		            System.out.printf("Enter"+ numbers+ "numbers");
-		            for (i=1; i <= numbers; i++){
-		                
-		                
-		            }
-		            
-		        }  
+		           for (int i = 1; i <= numbers; i++){
+		        	   numberEntered= scnr.nextDouble();
+		        	   totalNum += numberEntered;
+		           } 
+		           
+		           System.out.println("Result:" + totalNum);
+		           System.out.println("Do you want to start over? (Y/N)");
+	            	goAgain= scnr.next();
+		           }
 		        
+		           
+		           if (operator.equals("-")){
+		        	   System.out.println("How many numbers would you like to subtract:");
+			            numbers= scnr.nextInt();
+			            System.out.println("Enter " + numbers + " numbers");
+			            numberEntered= scnr.nextDouble();
+			            for(int i = 1; i <= numbers - 1; i++){
+			            	num= scnr.nextDouble();
+			            	numberEntered -= num;
+			            	
+			            	
+			            }
+			            System.out.println("Result: "+ numberEntered);
+			            System.out.println("Do you want to start over? (Y/N)");
+		            	goAgain= scnr.next();
+		           }
+			            
+			            if(operator.equals("*")){
+			            	 System.out.println("How many numbers would you like to multiply:");
+			            	 numbers= scnr.nextInt();
+					         System.out.println("Enter "+ numbers + " numbers");
+					         numberEntered= scnr.nextDouble();
+					         for(int i = 1; i <= numbers - 1; i++){
+					            	num= scnr.nextDouble();
+					            	numberEntered *= num;
+					         }
+					         System.out.println("Result: "+ numberEntered);
+					         System.out.println("Do you want to start over? (Y/N)");
+				            	goAgain= scnr.next();
+			            }
+			            if(operator.equals("/")){
+			            	System.out.println("How many numbers would you like to divide:");
+			            	numbers= scnr.nextInt();
+			            	System.out.println("Enter " + numbers + " numbers");
+			            	numberEntered= scnr.nextDouble();
+					         for(int i = 1; i <= numbers - 1; i++){
+					            	num= scnr.nextDouble();
+					            	numberEntered /= num;}
+					         System.out.println("Result: " + numberEntered);
+					         System.out.println("Do you want to start over? (Y/N)");
+				            	goAgain= scnr.next();
+			            }
 		    }
+			   if (calculatorType.equals("scientific")){
+			            	System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division, 'sin' for sin x, 'cos' for cos x, 'tan' for tan x:");
+			            	operator= scnr.next();
+					        while(!operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("sin")  && !operator.equals("cos") && !operator.equals("tan")){
+					            System.out.println("Invalid Operation");
+					            System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division, 'sin' for sin x, 'cos' for cos x, 'tan' for tan x:");
+					            operator= scnr.next();}
+					        if(operator.equals("+")){
+					            System.out.println("How many numbers would you like to add:");
+					            numbers= scnr.nextInt();
+					            System.out.printf("Enter "+ numbers + " numbers");
+					           for (int i = 1; i <= numbers; i++){
+					        	   numberEntered= scnr.nextDouble();
+					        	   totalNum += numberEntered;
+					           } 
+					           
+					           System.out.println("Result:" + totalNum);
+					           System.out.println("Do you want to start over? (Y/N)");
+				            	goAgain= scnr.next();
+					           }
+					        
+					           
+					           if (operator.equals("-")){
+					        	   System.out.println("How many numbers would you like to subtract:");
+						            numbers= scnr.nextInt();
+						            System.out.println("Enter " + numbers + " numbers");
+						            numberEntered= scnr.nextDouble();
+						            for(int i = 1; i <= numbers - 1; i++){
+						            	num= scnr.nextDouble();
+						            	numberEntered -= num;
+						            	
+						            	
+						            }
+						            System.out.println("Result: "+ numberEntered);
+						            System.out.println("Do you want to start over? (Y/N)");
+					            	goAgain= scnr.next();
+					           }
+						            
+						            if(operator.equals("*")){
+						            	 System.out.println("How many numbers would you like to multiply:");
+						            	 numbers= scnr.nextInt();
+								         System.out.println("Enter "+ numbers + " numbers");
+								         numberEntered= scnr.nextDouble();
+								         for(int i = 1; i <= numbers - 1; i++){
+								            	num= scnr.nextDouble();
+								            	numberEntered *= num;
+								         }
+								         System.out.println("Result: "+ numberEntered);
+								         System.out.println("Do you want to start over? (Y/N)");
+							            	goAgain= scnr.next();
+						            }
+						            if(operator.equals("/")){
+						            	System.out.println("How many numbers would you like to divide:");
+						            	numbers= scnr.nextInt();
+						            	System.out.println("Enter " + numbers + " numbers");
+						            	numberEntered= scnr.nextDouble();
+								         for(int i = 1; i <= numbers - 1; i++){
+								            	num= scnr.nextDouble();
+								            	numberEntered /= num;}
+								         System.out.println("Result: " + numberEntered);
+								         System.out.println("Do you want to start over? (Y/N)");
+							            	goAgain= scnr.next();
+						            }
+						            if(operator.equals("sin")){
+						            	System.out.println("Enter numbers in radians to find sin " );
+						            	 radians = scnr.nextDouble();
+						            	 double sinValue = Math.sin(radians);
+						            	 System.out.println("Result: " + sinValue);
+						            	 System.out.println("Do you want to start over? (Y/N)");
+							            	goAgain= scnr.next();
+						            }
+						            if(operator.equals("cos")){
+						            	System.out.println("Enter numbers in radians to find cos " );
+						            	radians= scnr.nextDouble();
+						            	double cosValue = Math.cos(radians);
+						            	System.out.println("Result" + cosValue);
+						            	 System.out.println("Do you want to start over? (Y/N)");
+							            	goAgain= scnr.next();}
+						            
+						            if(operator.equals("tan")){
+						            	System.out.println("Enter numbers in radians to find tan");
+						            	radians= scnr.nextDouble();
+						            	double tanValue = Math.tan(radians);
+						            	System.out.println("Result" + tanValue);
+						            	 System.out.println("Do you want to start over? (Y/N)");
+							            	goAgain= scnr.next();
+						            }
+						         /*   else {
+						            	System.out.println("Do you want to start over? (Y/N)");
+						            	goAgain= scnr.next();
+						            }*/
+					        
+			            }
+			            
+		        	   
+		           }           
+		                
+		            System.out.println("Goodbye");    
+		            
+		    }            
+		         
+		        
+		    
 		}
+
 		
-		}
-	}
+		
+//	}
