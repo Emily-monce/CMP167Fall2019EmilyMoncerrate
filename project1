@@ -15,32 +15,33 @@ public class project
 		while (goAgain.equals("Y")){
 		System.out.println("Enter the calculator mode: Standard/Scientific?");
 		calculatorType= scnr.next();
-		    if(calculatorType.equals("standard")) {
+		    if(calculatorType.equals("Standard")) {
+		    System.out.println("The calculator will operate in standard mode.");
 		    System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division :");
 		    operator= scnr.next();
 		        while(!operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/")){
 		            System.out.println("Invalid Operation");
-		            System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division :");
+		            System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division ");
 		            operator= scnr.next();
 		        
 		    }
 		        if(operator.equals("+")){
-		            System.out.println("How many numbers would you like to add:");
+		            System.out.println("How many numbers do you want to add?");
 		            numbers= scnr.nextInt();
-		            System.out.printf("Enter"+ numbers+ "numbers");
+		            System.out.println("Enter"+ numbers+ "numbers");
 		           for (int i = 1; i <= numbers; i++){
 		        	   numberEntered= scnr.nextDouble();
 		        	   totalNum += numberEntered;
 		           } 
 		           
-		           System.out.println("Result:" + totalNum);
+		           System.out.println("Result: " + totalNum);
 		           System.out.println("Do you want to start over? (Y/N)");
 	            	goAgain= scnr.next();
 		           }
 		        
 		           
 		           if (operator.equals("-")){
-		        	   System.out.println("How many numbers would you like to subtract:");
+		        	   System.out.println("How many numbers would you like to subtract?");
 			            numbers= scnr.nextInt();
 			            System.out.println("Enter " + numbers + " numbers");
 			            numberEntered= scnr.nextDouble();
@@ -56,7 +57,7 @@ public class project
 		           }
 			            
 			            if(operator.equals("*")){
-			            	 System.out.println("How many numbers would you like to multiply:");
+			            	 System.out.println("How many numbers do you want to multiply?");
 			            	 numbers= scnr.nextInt();
 					         System.out.println("Enter "+ numbers + " numbers");
 					         numberEntered= scnr.nextDouble();
@@ -69,7 +70,7 @@ public class project
 				            	goAgain= scnr.next();
 			            }
 			            if(operator.equals("/")){
-			            	System.out.println("How many numbers would you like to divide:");
+			            	System.out.println("How many numbers do you want to divide?
 			            	numbers= scnr.nextInt();
 			            	System.out.println("Enter " + numbers + " numbers");
 			            	numberEntered= scnr.nextDouble();
