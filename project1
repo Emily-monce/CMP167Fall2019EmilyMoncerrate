@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scnr = new Scanner(System.in);
+		String calculatorType= "";
+		String operator= "";
+		int numbers;
+		double numberEntered;
+		String goAgain = "Y";
+		
+		while (goAgain.equals("Y")){
+		System.out.println("Enter the calculator mode: Standard/Scientific?");
+		calculatorType= scnr.next();
+		    if(calculatorType.equals("standard")) {
+		    System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division :");
+		    operator= scnr.next();
+		        while(!operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/")){
+		            System.out.println("Invalid Operation");
+		            System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division :");
+		            operator= scnr.next();
+		        
+		    }
+		        if(operator.equals("+")){
+		            System.out.println("How many numbers would you like to add:");
+		            numbers= scnr.nextInt();
+		            System.out.printf("Enter"+ numbers+ "numbers");
+		            for (i=1; i <= numbers; i++){
+		                
+		                
+		            }
+		            
+		        }  
+		        
+		    }
+		}
+		
+		}
+	}
