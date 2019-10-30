@@ -12,10 +12,10 @@ public class Main
 		double num = 0;
 		double radians= 0;
 		
-		while (goAgain.equals("Y")){
+		while (goAgain.equalsIgnoreCase("Y")){
 		System.out.println("Enter the calculator mode: Standard/Scientific?");
 		calculatorType= scnr.next();
-		    if(calculatorType.equals("Standard")) {
+		    if(calculatorType.equalsIgnoreCase("Standard")) {
 		    System.out.println("The calculator will operate in standard mode.");
 		    System.out.println("Enter '+' for addition, '-' for subtractions, '*' for multiplication, '/' for division ");
 		    operator= scnr.next();
