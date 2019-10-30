@@ -11,13 +11,13 @@ public class abreviations {
 	String BFF="Best friend forever";
 	String TMI="Too much information"; 
 	String translation= "";
-	if (abbreviation.equals("LOL")) {
+	if (abbreviation.equalsIgnoreCase("LOL")) {
 		System.out.println(LOL);
 		}
-	else if (abbreviation.equals("BFF")) {
+	else if (abbreviation.equalsIgnoreCase("BFF")) {
 		System.out.println(BFF);
 	}
-	else if (abbreviation.equals("TMI")) {
+	else if (abbreviation.equalsIgnoreCase("TMI")) {
 		System.out.println(TMI);
 	}
 	else {
