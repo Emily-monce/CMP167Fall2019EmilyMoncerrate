@@ -1,0 +1,42 @@
+import java.util.*;
+ class Main {
+	public static void main (java.lang.String[] args) {
+		int [] grades = new int [20];
+    System.out.println(readGrades(grades));
+		System.out.println(sum(arr));
+		
+		
+		
+		
+	}
+	public static int readGrades(int[] grades) {
+		Scanner scnr= new Scanner(System.in);
+		int count= 0;
+		int index=0;
+		int input=0;
+		while (input>= 0) {
+			System.out.println("Enter a grade:");
+			input = scnr.nextInt();
+			count ++;
+			grades[index]= input;
+			index++;
+		
+			
+			
+		}
+		return count-1;
+	}
+	public static int sum(int[] arr) {
+		int sum=0;
+    This.grades=arr;
+		for (int i =0; i< arr.length; i++) {
+			sum += arr[i];
+			
+		}
+		return sum;
+		
+		
+	}
+
+
+}
